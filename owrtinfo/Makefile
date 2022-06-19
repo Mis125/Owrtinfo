@@ -6,7 +6,7 @@ include $(TOPDIR)/rules.mk
 PKG_NAME:=owrtinfo
 PKG_VERSION =3.0
 PKG_RELEASE=3
-PKG_MAINTAINER:= Martin Miscin <martin.miscin@hotmail.hr>
+PKG_MAINTAINER:= Martin Miscin <martin.miscin@sartura.hr>
 
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL:=https://github.com/Mis125/owrtinfo-src/
@@ -32,7 +32,7 @@ define Package/owrtinfo/install
 	$(CP) ./files/owrtinfo.init $(1)/etc/init.d/owrtinfo
 	$(INSTALL_DIR) $(1)/etc/config/
 	$(CP) ./files/owrtinfo.config $(1)/etc/config/owrtinfo
-	$(INSTALL_DIR) $(1)/usr/bin/
+	$(INSTALL_DIR) $(1)/usr/bin
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/owrtinfo-src/owrtinfo.sh $(1)/usr/bin/owrtinfo
 
 endef
