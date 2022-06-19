@@ -32,7 +32,7 @@ define Package/owrtinfo/install
 	$(CP) ./files/owrtinfo.init $(1)/etc/init.d/owrtinfo
 	$(INSTALL_DIR) $(1)/etc/config/
 	$(CP) ./files/owrtinfo.config $(1)/etc/config/owrtinfo
-	$(INSTALL_DIR) $(1)/usr/bin
+	$(INSTALL_DIR) $(1)/usr/bin/
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/owrtinfo-src/owrtinfo.sh $(1)/usr/bin/owrtinfo
 
 endef
